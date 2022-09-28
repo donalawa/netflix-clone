@@ -39,6 +39,7 @@ header {
 
 header .header-content {
     padding: 30px;
+    justify-content: 'center';
 }
 
 .overlay {
@@ -46,8 +47,9 @@ header .header-content {
     width: 100%;
     /* background-color: black; */
     position: absolute;
-    z-index: 12;
-    background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 100%,transparent 70%,rgba(0,0,0,1));
+    z-index: 2;
+    /* background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 100%,transparent 70%,rgba(0,0,0,1)); */
+    background-color: rgba(0, 0, 0, .6);
 }
 
 
@@ -57,16 +59,22 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 13;
-    position: absolute;
-    width: 90%;
+    /* position: absolute; */
+    width: 95%;
+    margin: 0 auto;
 }
 
 nav .logo {
     width: 25%;
+    z-index: inherit;
 }
 
 nav .logo svg {
     fill: red;
+}
+
+nav .signin {
+    z-index: inherit;
 }
 
 nav .signin button {
@@ -613,7 +621,9 @@ footer ul li a:hover {
 /* DESKTOP STYLE */
 
 @media screen and (min-width: 950px) {
-
+    header {
+        height: 75vh;
+    }
     nav .logo {
         width: 15%;
     }
@@ -773,9 +783,9 @@ footer ul li a:hover {
         width: 10%;
     }
 
-    /* nav .signin button  {
-
-    } */
+    nav .signin button  {
+        padding: 7px 15px !important;
+    }
 
     .banner-content h1 {
         font-size: 4rem !important;
